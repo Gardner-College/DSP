@@ -7,8 +7,8 @@ duration = 1  # seconds
 t = np.linspace(0, duration, int(sampling_rate * duration), endpoint=False)
 
 # Define multiple frequencies and corresponding amplitudes
-frequencies = [5, 50, 120, 200, 400, 450]  # Frequencies of sine waves (Hz)
-amplitudes = [2.0, 3.0, 1.5, 2.5, 3.5, 4.0]  # Corresponding amplitudes
+frequencies = [15, 150, 220, 300, 500, 650]  # Frequencies of sine waves (Hz)
+amplitudes = [2.5, 3.5, 1.0, 2.0, 4.0, 2.0]  # Corresponding amplitudes
 
 # Generate the composite signal by summing sine waves with the given frequencies and amplitudes
 signal = sum(amplitude * np.sin(2 * np.pi * frequency * t) for amplitude, frequency in zip(amplitudes, frequencies))
